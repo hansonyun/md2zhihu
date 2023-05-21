@@ -3,6 +3,9 @@ on: [push]
 jobs:
   md2zhihu:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
     - uses: actions/checkout@v2
     - uses: drmingdrmer/md2zhihu@main
